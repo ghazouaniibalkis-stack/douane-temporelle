@@ -1,19 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<!-- ✍️ الشاشة الأولى: استمارة التسجيل -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- ✍️ رأس الصفحة بلون أزرق ليلي -->
+        <TextView
+            android:id="@+id/tv_titre_gb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1A237E"
+            android:gravity="center"
+            android:padding="28dp"
+            android:text="⏳ DOUANE TEMPORELLE"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- ✍️ خانات الإدخال -->
+            <EditText
+                android:id="@+id/et_nom_gb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nom du voyageur"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/et_naissance_gb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Année de naissance (ex: 1990)"
+                android:inputType="number"
+                android:maxLength="4" />
+
+            <EditText
+                android:id="@+id/et_destination_gb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Année de destination (ex: 2050)"
+                android:inputType="number"
+                android:maxLength="4" />
+
+            <!-- ✍️ سبب السفر -->
+            <TextView
+                android:id="@+id/tv_motif_gb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Motif du voyage"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rg_motif_gb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rb_tourisme_gb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Tourisme" />
+
+                <RadioButton
+                    android:id="@+id/rb_modification_gb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Modification du passé" />
+
+                <RadioButton
+                    android:id="@+id/rb_fuite_gb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fuite" />
+            </RadioGroup>
+
+            <!-- ✍️ زر الفحص -->
+            <Button
+                android:id="@+id/btn_inspecter_gb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="#1A237E"
+                android:text="Inspecter le profil"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
