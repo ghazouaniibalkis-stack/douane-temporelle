@@ -2,13 +2,15 @@ package com.example.douanetemporelle;
 
 public class CleExtra {
 
+    // Nestaamlou les 4 derniers chiffres de la CIN comme début de chaque clé, w nkawenou les clés b méthode static
+    public static final String MATRICULE = "6747";
 
-    public static final String MATRICULE = "1234";
-
-    public static String construireCle(String matricule, String nom) {
-        return matricule + "_" + nom;
+     //aatit lformes li bech ihez beha les données
+    public static String construireCle(String matricule, String champ) {
+        return matricule + "_" + champ;
     }
 
+    //méthode hedhi hiya bech tkhazen lesm bel est3ml mtaa matricule bech nfar9o bineto w bin lbe9ii
     public static String nomVoyageur(String matricule) {
         return construireCle(matricule, "NOM_VOYAGEUR");
     }
