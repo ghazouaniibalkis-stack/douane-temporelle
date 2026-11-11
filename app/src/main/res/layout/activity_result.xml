@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--lon mtaa lbackground yetbadel aala hasb lcode java-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2E7D32"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="32dp"
+    tools:context=".ResultActivity">
+
+    <TextView
+        android:id="@+id/tv_sous_titre_gb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:letterSpacing="0.2"
+        android:text="DOUANE TEMPORELLE"
+        android:textColor="#CCFFFFFF"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_icone_gb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="✈️"
+        android:textSize="90sp" />
+
+    <TextView
+        android:id="@+id/tv_message_gb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Verdict"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_nouveau_gb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:backgroundTint="#FFFFFF"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:text="Nouveau voyageur"
+        android:textColor="#212121" />
+</LinearLayout>
