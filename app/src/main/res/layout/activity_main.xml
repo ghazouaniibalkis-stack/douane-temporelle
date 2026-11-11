@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- ✍️ الشاشة الأولى: استمارة التسجيل -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -13,7 +12,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- ✍️ رأس الصفحة بلون أزرق ليلي -->
         <TextView
             android:id="@+id/tv_titre_gb"
             android:layout_width="match_parent"
@@ -32,7 +30,7 @@
             android:orientation="vertical"
             android:padding="24dp">
 
-            <!-- ✍️ خانات الإدخال -->
+
             <EditText
                 android:id="@+id/et_nom_gb"
                 android:layout_width="match_parent"
@@ -58,7 +56,7 @@
                 android:inputType="number"
                 android:maxLength="4" />
 
-            <!-- ✍️ سبب السفر -->
+
             <TextView
                 android:id="@+id/tv_motif_gb"
                 android:layout_width="match_parent"
@@ -92,7 +90,7 @@
                     android:text="Fuite" />
             </RadioGroup>
 
-            <!-- ✍️ زر الفحص -->
+
             <Button
                 android:id="@+id/btn_inspecter_gb"
                 android:layout_width="match_parent"
