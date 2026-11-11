@@ -11,6 +11,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 //intent bech torbet lpage loula bil page thenya w budnle ihoot l'état mtaa l'écran
 
+
 public class MainActivity extends AppCompatActivity {
 
 
@@ -45,7 +46,14 @@ public class MainActivity extends AppCompatActivity {
                             Toast.LENGTH_SHORT).show();
                     return;
                 }
-
+                // nthabet est ce que nom 7roof barka mouch maahom ar9am ken 7aat ra9em yjih toast w trim tna7ii l'espace
+                if (!nom.trim().matches("[a-zA-ZÀ-ÿ ]+")) {
+                    Toast.makeText(MainActivity.this,
+                            "Le nom ne doit contenir que des lettres",
+                            Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                //hedhi tbadel lektiba lnmr aala khater edit texte te9bel ken string hata ken utilisateur kteb nmr temchi string donc naamlo lfct hedhi bech ntraj3oha nmr
                 int naissance = Integer.parseInt(naissanceTxt);
                 int destination = Integer.parseInt(destinationTxt);
 
@@ -61,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
 
                 // bech temchi mil interface loula li thenya
                 Intent intent = new Intent(MainActivity.this, VerificationActivity.class);
-
+         //lehne st3mlna lmatricule bech naamlo lkeys lchaque information w mbaad yetb3thoo les information lil page verificationavtivity best3meel l'intent
                 String m = CleExtra.MATRICULE;
                 intent.putExtra(CleExtra.nomVoyageur(m), nom);
                 intent.putExtra(CleExtra.anneeNaissance(m), naissance);
