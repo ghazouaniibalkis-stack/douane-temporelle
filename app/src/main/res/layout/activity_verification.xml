@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="1"
+    tools:context=".VerificationActivity">
+
+<!--hatina lespace mtaa taswira fil page 0.3-->
+    <ImageView
+        android:id="@+id/iv_photo_gb"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.3"
+        android:background="#263238"
+        android:contentDescription="Photo du voyageur"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_launcher_foreground" />
+
+    <RelativeLayout
+        android:id="@+id/rl_passeport_gb"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.7"
+        android:background="#FFF8E1"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tv_titre_passeport_gb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🛂 PASSEPORT TEMPOREL"
+            android:textColor="#3E2723"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_ligne_gb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_titre_passeport_gb"
+            android:text="- - - - - - - - - - - - - - - -"
+            android:textColor="#8D6E63" />
+
+        <TextView
+            android:id="@+id/tv_nom_gb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_ligne_gb"
+            android:layout_marginTop="16dp"
+            android:text="Nom :"
+            android:textColor="#3E2723"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_age_gb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_nom_gb"
+            android:layout_marginTop="12dp"
+            android:text="Âge temporel :"
+            android:textColor="#3E2723"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_motif_resume_gb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_age_gb"
+            android:layout_marginTop="12dp"
+            android:text="Motif :"
+            android:textColor="#3E2723"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_approuver_gb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_motif_resume_gb"
+            android:layout_marginTop="28dp"
+            android:backgroundTint="#2E7D32"
+            android:text="Approuver le saut temporel"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btn_refuser_gb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_approuver_gb"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#C62828"
+            android:text="Refuser (Risque de paradoxe)"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+</LinearLayout>
